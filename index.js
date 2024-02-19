@@ -25,9 +25,9 @@ mongoose.connection.on('error', (err) => {
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
+app.options('*', cors());
 app.use(cors({
-  origin: 'http://localhost:3000', 
+  origin: 'https://basic-banking-system-frontend.vercel.app', 
   optionsSuccessStatus: 200 
 }));
 
